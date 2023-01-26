@@ -14,6 +14,25 @@ const App: React.FC = () => {
   const projects: projectsSliceState = useSelector(selectProjects);
 
   const [input, setInput] = useState("");
+  let projectToRender;
+
+  if (input.length >= 2) {
+    projectToRender = projects.data
+      .filter(
+        (project) =>
+          project.customerName
+            .toLowerCase()
+            .includes(input.toLocaleLowerCase()) ||
+          project.address.toLowerCase().includes(input.toLocaleLowerCase())
+      )
+      .map((project) => (
+        <div key={project.projectId}>{<ProjectCard {...project} />}</div>
+      ));
+  } else {
+    projectToRender = projects.data.map((project) => (
+      <div key={project.projectId}>{<ProjectCard {...project} />}</div>
+    ));
+  }
 
   useEffect(() => {
     const fetchData = async () => {
@@ -40,9 +59,10 @@ const App: React.FC = () => {
       <div className="main">
         <SearchBar input={input} setInput={setInput} />
         <div className="projects-box">
-          {projects.data.map((project) => (
+          {/* {projects.data.map((project) => (
             <div key={project.projectId}>{<ProjectCard {...project} />}</div>
-          ))}
+          ))} */}
+          {projectToRender}
         </div>
       </div>
     </div>
