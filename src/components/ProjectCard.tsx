@@ -9,7 +9,7 @@ const ProjectCard: React.FC<projectData> = (props) => {
   return (
     <div className="container">
       <div className="header">
-        <div className="customerName">{props.customerName}</div>
+        <div className="customerName">{props.customerName || "Untitled"}</div>
         <div className="projectId">{props.projectId}</div>
       </div>
       <div className="address">{props.address}</div>
@@ -25,7 +25,13 @@ const ProjectCard: React.FC<projectData> = (props) => {
           <div className="last-update">{dateString}</div>
         </Detail>
         <Detail text="Total">
-          <div className="total">{String(props.totalProject)}</div>
+          <div className="total">
+            $
+            {props.totalProject.toLocaleString("en-US", {
+              maximumFractionDigits: 2,
+              minimumFractionDigits: 2,
+            })}
+          </div>
         </Detail>
         <Detail text="Stage">
           <div
@@ -43,11 +49,11 @@ const ProjectCard: React.FC<projectData> = (props) => {
 
 export default ProjectCard;
 
-function Detail({ text, children }: { text: string } & PropsWithChildren) {
+function Detail(props: { text: string } & PropsWithChildren) {
   return (
     <div className="detail-title">
-      <div style={{ color: "#9F9F9F" }}>{text}</div>
-      {children}
+      <div style={{ color: "#9F9F9F" }}>{props.text}</div>
+      {props.children}
     </div>
   );
 }

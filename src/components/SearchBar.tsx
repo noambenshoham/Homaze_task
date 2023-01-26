@@ -3,18 +3,16 @@ import "../styles/SearchBar.css";
 //@ts-ignore
 import SearchIcon from "../assets/Icon.png";
 
-const SearchBar: React.FC = () => {
-  const [input, setInput] = useState("");
-
+const SearchBar: React.FC<{ input: string; setInput: any }> = (props) => {
   return (
-    <div className="containerr">
+    <div className="search-bar-container">
       <input
         className="search-bar"
-        value={input}
+        value={props.input}
         type="search"
         placeholder="Search Customer"
         onChange={(event) => {
-          setInput(event.target.value);
+          props.setInput(event.target.value);
         }}
       />
       <img src={SearchIcon} />

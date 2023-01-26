@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import SearchBar from "./components/SearchBar";
 import "./styles/App.css";
 import { useDispatch, useSelector } from "react-redux";
@@ -12,7 +12,8 @@ import ProjectCard from "./components/ProjectCard";
 const App: React.FC = () => {
   const dispatch = useDispatch();
   const projects: projectsSliceState = useSelector(selectProjects);
-  console.log(projects);
+
+  const [input, setInput] = useState("");
 
   useEffect(() => {
     const fetchData = async () => {
@@ -37,7 +38,7 @@ const App: React.FC = () => {
     <div className="App">
       <div className="Header">Contracts</div>
       <div className="main">
-        <SearchBar />
+        <SearchBar input={input} setInput={setInput} />
         <div className="projects-box">
           {projects.data.map((project) => (
             <div key={project.projectId}>{<ProjectCard {...project} />}</div>
