@@ -8,6 +8,7 @@ import {
   setProjects,
 } from "./Redux/projects-slice";
 import { selectProjects } from "./Redux/Store";
+import ProjectCard from "./components/ProjectCard";
 const App: React.FC = () => {
   const dispatch = useDispatch();
   const projects: projectsSliceState = useSelector(selectProjects);
@@ -37,9 +38,11 @@ const App: React.FC = () => {
       <div className="Header">Contracts</div>
       <div className="main">
         <SearchBar />
-        {projects.data.map((project) => (
-          <div key={project.projectId}>{project.customerName}</div>
-        ))}
+        <div className="projects-box">
+          {projects.data.map((project) => (
+            <div key={project.projectId}>{<ProjectCard {...project} />}</div>
+          ))}
+        </div>
       </div>
     </div>
   );

@@ -6,11 +6,11 @@ export interface projectData {
   projectId: string;
   address: string;
   rooms: {
-    id: Number;
+    id: number;
     name: string;
   }[];
-  updated_timestmp: Number;
-  totalProject: Number;
+  updated_timestmp: number;
+  totalProject: number;
   projectState: string;
 }
 

@@ -1,0 +1,87 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 350px;
+  height: 235px;
+  background: #ffffff;
+  border: 1px solid #ddedf4;
+  border-radius: 9px;
+}
+
+.header {
+  background: #f6f9fa;
+  height: 76px;
+  padding: 20px;
+}
+
+.customerName {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  /* identical to box height, or 125% */
+
+  letter-spacing: 0.272728px;
+
+  color: #2d2d2d;
+}
+
+.projectId {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 12px;
+  /* identical to box height, or 100% */
+
+  letter-spacing: 0.272728px;
+
+  color: #2d2d2d;
+
+  opacity: 0.5;
+}
+
+.address {
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+.rooms {
+  margin-top: 20px;
+  margin-bottom: 7px;
+  margin-left: 20px;
+  display: flex;
+  justify-content: start;
+  gap: 3px;
+}
+
+.room {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+  /* identical to box height, or 167% */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.272728px;
+  color: #3cb2e4;
+  background: rgba(60, 178, 228, 0.1);
+  border-radius: 6px;
+  width: 82px;
+  height: 28px;
+}
+
+.details {
+  margin-left: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.stage.in-progress {
+  color: yellow;
+}
