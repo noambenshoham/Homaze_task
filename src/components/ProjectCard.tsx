@@ -7,8 +7,8 @@ const ProjectCard: React.FC<projectData> = (props) => {
   let dateString = `${date.getMonth()}.${date.getDay()}.${date.getFullYear()}`;
 
   return (
-    <div className="container">
-      <div className="header">
+    <div className="contract">
+      <div className="contract-header">
         <div className="customerName">{props.customerName || "Untitled"}</div>
         <div className="projectId">{props.projectId}</div>
       </div>

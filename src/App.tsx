@@ -55,15 +55,10 @@ const App: React.FC = () => {
 
   return (
     <div className="App">
-      <div className="Header">Contracts</div>
+      <div className="header">Contracts</div>
       <div className="main">
         <SearchBar input={input} setInput={setInput} />
-        <div className="projects-box">
-          {/* {projects.data.map((project) => (
-            <div key={project.projectId}>{<ProjectCard {...project} />}</div>
-          ))} */}
-          {projectToRender}
-        </div>
+        <div className="contracts-container">{projectToRender}</div>
       </div>
     </div>
   );

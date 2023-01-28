@@ -1,4 +1,4 @@
-.container {
+.contract {
   display: grid;
   grid-template-rows: 76px 20px 28px 40px;
   grid-row-gap: 20px;
@@ -10,7 +10,7 @@
   border-radius: 9px;
 }
 
-.header {
+.contract-header {
   background: #f6f9fa;
   height: 36px;
   padding: 20px;

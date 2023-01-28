@@ -18,3 +18,9 @@
 .search-bar:focus {
   outline: unset;
 }
+
+@media all and (max-width: 1024px) {
+  .search-bar-container {
+    width: auto;
+  }
+}
