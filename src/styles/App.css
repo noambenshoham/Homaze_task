@@ -7,9 +7,6 @@ body {
 }
 
 .App {
-  /* padding: 1vw;
-  padding: 1vh;
-  padding: 1vmin; */
   padding: 1vmax;
 }
 
@@ -29,16 +26,13 @@ body {
   background: #ffffff;
   border: 1px solid #ddedf4;
   border-radius: 9px;
-  /* display: flex;
-  flex-direction: column;
-  gap: 1px; */
 }
 
 .contracts-container {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  gap: 10px;
+  gap: 28px;
   padding-bottom: 26px;
   position: relative;
   width: 100%;
