@@ -1,0 +1,60 @@
+* {
+  font-family: "Poppins";
+  font-style: normal;
+}
+
+body {
+  font-family: "Poppins";
+  font-style: normal;
+  background: #f6f9fa;
+}
+
+.App {
+  // padding: 1vmax;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .header {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 48px;
+    letter-spacing: 0.436364px;
+    color: #2d2d2d;
+  }
+
+  .main {
+    max-width: 90vw;
+    padding: 10px;
+    background: #ffffff;
+    border: 1px solid #ddedf4;
+    border-radius: 9px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    .contracts-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      gap: 16px;
+      // padding-bottom: 26px;
+    }
+    @media (min-width: 768px) {
+      .contracts-container {
+        flex-wrap: row wrap;
+        flex-direction: unset;
+        gap: 28px;
+      }
+    }
+  }
+}
+
+// @media all and (max-width: 1070px) {
+//   .projects-box {
+//     justify-content: center;
+//   }
+// }

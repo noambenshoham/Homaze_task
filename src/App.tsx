@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import SearchBar from "./components/SearchBar";
-import "./styles/App.css";
+import "./styles/App.scss";
 import { useDispatch, useSelector } from "react-redux";
 import {
   projectData,
