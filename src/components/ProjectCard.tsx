@@ -1,6 +1,5 @@
 import React, { PropsWithChildren } from "react";
 import { projectData } from "../Redux/projects-slice";
-import dateFormat from "dateformat";
 import "../styles/ContractCard.scss";
 const ProjectCard: React.FC<projectData> = (props) => {
   let date = new Date(props.updated_timestmp);

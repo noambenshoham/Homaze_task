@@ -51,7 +51,7 @@ const App: React.FC = () => {
       dispatch(setProjects({ data: data }));
     };
     fetchData().catch(console.error);
-  }, []);
+  });
 
   return (
     <div className="App">
