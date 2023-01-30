@@ -8,7 +8,7 @@ import {
   setProjects,
 } from "./Redux/projects-slice";
 import { selectProjects } from "./Redux/Store";
-import ProjectCard from "./components/ProjectCard";
+import ContractCard from "./components/ContractCard";
 const App: React.FC = () => {
   const dispatch = useDispatch();
   const projects: projectsSliceState = useSelector(selectProjects);
@@ -26,11 +26,11 @@ const App: React.FC = () => {
           project.address.toLowerCase().includes(input.toLocaleLowerCase())
       )
       .map((project) => (
-        <div key={project.projectId}>{<ProjectCard {...project} />}</div>
+        <div key={project.projectId}>{<ContractCard {...project} />}</div>
       ));
   } else {
     projectToRender = projects.data.map((project) => (
-      <div key={project.projectId}>{<ProjectCard {...project} />}</div>
+      <div key={project.projectId}>{<ContractCard {...project} />}</div>
     ));
   }
 

@@ -1,7 +1,7 @@
 import React, { PropsWithChildren } from "react";
 import { projectData } from "../Redux/projects-slice";
 import "../styles/ContractCard.scss";
-const ProjectCard: React.FC<projectData> = (props) => {
+const ContractCard: React.FC<projectData> = (props) => {
   let date = new Date(props.updated_timestmp);
   let dateString = `${date.getMonth()}.${date.getDay()}.${date.getFullYear()}`;
 
@@ -48,7 +48,7 @@ const ProjectCard: React.FC<projectData> = (props) => {
   );
 };
 
-export default ProjectCard;
+export default ContractCard;
 
 function Detail(props: { text: string } & PropsWithChildren) {
   return (
