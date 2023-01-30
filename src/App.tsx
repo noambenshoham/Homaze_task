@@ -55,10 +55,12 @@ const App: React.FC = () => {
 
   return (
     <div className="App">
-      <div className="header">Contracts</div>
-      <div className="main">
-        <SearchBar input={input} setInput={setInput} />
-        <div className="contracts-container">{projectToRender}</div>
+      <div className="app-container">
+        <div className="header">Contracts</div>
+        <div className="main">
+          <SearchBar input={input} setInput={setInput} />
+          <div className="contracts-container">{projectToRender}</div>
+        </div>
       </div>
     </div>
   );

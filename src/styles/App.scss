@@ -57,7 +57,7 @@ body {
 }
 @media (min-width: 768px) {
   .header {
-    align-self: left;
+    align-self: flex-start;
   }
   .contracts-container {
     flex-flow: row wrap;
