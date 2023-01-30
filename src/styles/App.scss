@@ -10,12 +10,10 @@ body {
 }
 
 .App {
-  // padding: 1vmax;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
   .header {
     font-family: "Poppins";
     font-style: normal;
@@ -27,7 +25,6 @@ body {
   }
 
   .main {
-    max-width: 90vw;
     padding: 10px;
     background: #ffffff;
     border: 1px solid #ddedf4;
@@ -35,26 +32,37 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    gap: 20px;
 
     .contracts-container {
       display: flex;
       flex-direction: column;
       justify-content: space-around;
       gap: 16px;
-      // padding-bottom: 26px;
     }
     @media (min-width: 768px) {
       .contracts-container {
-        flex-wrap: row wrap;
+        flex-flow: row wrap;
+        justify-content: flex-start;
         flex-direction: unset;
-        gap: 28px;
+        width: 720px;
+      }
+    }
+    @media (min-width: 1130px) {
+      .contracts-container {
+        width: 1088px;
       }
     }
   }
 }
-
-// @media all and (max-width: 1070px) {
-//   .projects-box {
-//     justify-content: center;
-//   }
-// }
+@media (min-width: 768px) {
+  .header {
+    align-self: left;
+  }
+  .contracts-container {
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    flex-direction: unset;
+    width: 720px;
+  }
+}
