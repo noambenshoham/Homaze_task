@@ -6,7 +6,7 @@
 
 [Link to the website](https://master--relaxed-cajeta-a885d4.netlify.app/)
 
-## Istructions:
+## Instructions:
 
 “Works contractor” is a person that handles/manages projects in the home remodeling area. A contractor has a web app based dashboard where he could manage his projects.
 
