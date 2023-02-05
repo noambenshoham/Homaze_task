@@ -1,10 +1,10 @@
 # Implement screen by design created in Figma
 
-[This is the link for the Figma design](<https://www.figma.com/file/0oxgD8jvXjIsG4t0h7NGFc/Homaze---Development-(Copy)?node-id=4404%3A2314&t=HxBxezi2fJMng9Sc-0>)
+[Link for the Figma design](<https://www.figma.com/file/0oxgD8jvXjIsG4t0h7NGFc/Homaze---Development-(Copy)?node-id=4404%3A2314&t=HxBxezi2fJMng9Sc-0>)
 
 ## Deployment of the pixel perfect project:
 
-### `[Link to the website](https://master--relaxed-cajeta-a885d4.netlify.app/)`
+[Link to the website](https://master--relaxed-cajeta-a885d4.netlify.app/)
 
 ## Run the project with local host:
 
